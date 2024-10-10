@@ -1,19 +1,24 @@
-bazel_dep(name = "rules_python", version = "0.36.0")
+# bazel_dep(name = "rules_python", version = "0.36.0")
 
-python = use_extension("@rules_python//python/extensions:python.bzl", "python")
-python.toolchain(
-    is_default = True,
-    python_version = "3.11",
-)
+# local_path_override(
+#     module_name = "rules_python",
+#     path = "/home/finn/repos/python-armv7/rules_python"
+# )
 
-use_repo(
-    python,
-    "python_3_11",
-    "python_3_11_x86_64-unknown-linux-gnu",
-    # "python_3_11_armv7-unknown-linux-gnu",
-    "pythons_hub",
-)
+# python = use_extension("@rules_python//python/extensions:python.bzl", "python")
+# python.toolchain(
+#     is_default = True,
+#     python_version = "3.11",
+# )
 
-register_toolchains(
-    "@python_3_11//:all",
-)
+# use_repo(
+#     python,
+#     "python_3_11",
+#     "python_3_11_x86_64-unknown-linux-gnu",
+#     # "python_3_11_armv7-unknown-linux-gnu",
+#     "pythons_hub",
+# )
+
+# register_toolchains(
+#     "@python_3_11//:all",
+# )
